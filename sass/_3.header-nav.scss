@@ -1,27 +1,85 @@
 .header {
+    z-index: 10;
+    display: fixed;
+    top: 0;
+
     &-check {
         display: inline-block;
         background-color: $color-1;
-        height: 4rem;
-        width: 2rem;
+        height: 5rem;
+        width: 3rem;
         border-radius: 5rem 5rem 2rem 2rem;
-        position: relative;
+        position: fixed;
         top: 2rem;
+        left: 3rem;
         transition: top 0.3s;
+        z-index: 10;
+        cursor: pointer;
 
         &::before {
             content: "";
             position: absolute;
 
-            height: 7rem;
+            height: 17rem;
             width: 0.2rem;
             bottom: 100%;
-            left: calc(1rem - 0.1rem);
+            left: calc(1.5rem - 0.1rem);
             background-color: inherit;
         }
     }
 
-    #navbar-check:checked + &-check {
-        top: 7rem;
+    #navbar-check {
+        // appearance: none;
+        display: none;
     }
+    #navbar-check:checked + &-check {
+        top: 17rem;
+    }
+}
+
+.navbar {
+    background-color: $color-1;
+    color: $color-5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    // padding: 1rem 0;
+    height: 15rem;
+
+    display: fixed;
+    z-index: 15;
+    top: 0;
+    margin-top: -15rem;
+    // transform: translateY(100%);
+    // transform-origin: top;
+    transition: transform 0.3s;
+
+    &-link {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        color: inherit;
+        transition: color 0.3s;
+
+        i {
+            font-size: 7rem;
+        }
+
+        span {
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 0.5rem;
+        }
+
+        &:hover {
+            color: $color-2;
+        }
+    }
+}
+
+#navbar-check:checked ~ .navbar {
+    transform: translateY(100%);
 }

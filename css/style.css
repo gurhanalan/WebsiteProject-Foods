@@ -29,24 +29,71 @@ html {
   font-size: 62.5%;
   font-family: "Nunito", sans-serif;
   font-weight: 400; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
 
-.header-check {
-  display: inline-block;
+.header {
+  z-index: 10;
+  display: fixed;
+  top: 0; }
+  .header-check {
+    display: inline-block;
+    background-color: black;
+    height: 5rem;
+    width: 3rem;
+    border-radius: 5rem 5rem 2rem 2rem;
+    position: fixed;
+    top: 2rem;
+    left: 3rem;
+    transition: top 0.3s;
+    z-index: 10;
+    cursor: pointer; }
+    .header-check::before {
+      content: "";
+      position: absolute;
+      height: 17rem;
+      width: 0.2rem;
+      bottom: 100%;
+      left: calc(1.5rem - 0.1rem);
+      background-color: inherit; }
+  .header #navbar-check {
+    display: none; }
+  #navbar-check:checked + .header-check {
+    top: 17rem; }
+
+.navbar {
   background-color: black;
-  height: 4rem;
-  width: 2rem;
-  border-radius: 5rem 5rem 2rem 2rem;
-  position: relative;
-  top: 2rem;
-  transition: top 0.3s; }
-  .header-check::before {
-    content: "";
-    position: absolute;
-    height: 7rem;
-    width: 0.2rem;
-    bottom: 100%;
-    left: calc(1rem - 0.1rem);
-    background-color: inherit; }
+  color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  height: 15rem;
+  display: fixed;
+  z-index: 15;
+  top: 0;
+  margin-top: -15rem;
+  transition: transform 0.3s; }
+  .navbar-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: inherit;
+    transition: color 0.3s; }
+    .navbar-link i {
+      font-size: 7rem; }
+    .navbar-link span {
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: 0.5rem; }
+    .navbar-link:hover {
+      color: white; }
 
-#navbar-check:checked + .header-check {
-  top: 7rem; }
+#navbar-check:checked ~ .navbar {
+  transform: translateY(100%); }
