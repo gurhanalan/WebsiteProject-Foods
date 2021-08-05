@@ -122,9 +122,8 @@ html {
       color: #a79a2d;
       text-shadow: 0.2rem 0.2rem 0.2rem black;
       left: 50%;
-      transform: translateX(-50%) scale(0); }
+      transform: translateX(-50%) scale(0);
+      transition: transform 0.3s; }
     .hero__icons--active {
-      transform: translateX(-50%) scale(1) !important; }
-
-.hero__icons--active {
-  transform: translateX(-50%) scale(1); }
+      transform: translateX(-50%) scale(1) !important;
+      transition: transform 0.3s 0.3s !important; }
