@@ -15,23 +15,38 @@ ORDER : Base + typograpy > general layout + grid > page layout > componenets
 1em = 16px
 
 */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: inherit; }
+  font-family: inherit;
+  font-weight: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400; }
 
-.section-one {
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden; }
+.header-check {
+  display: inline-block;
+  background-color: black;
+  height: 4rem;
+  width: 2rem;
+  border-radius: 5rem 5rem 2rem 2rem;
+  position: relative;
+  top: 2rem;
+  transition: top 0.3s; }
+  .header-check::before {
+    content: "";
+    position: absolute;
+    height: 7rem;
+    width: 0.2rem;
+    bottom: 100%;
+    left: calc(1rem - 0.1rem);
+    background-color: inherit; }
+
+#navbar-check:checked + .header-check {
+  top: 7rem; }
