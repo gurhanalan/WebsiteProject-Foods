@@ -47,8 +47,9 @@ html {
 
 .header {
   z-index: 10;
-  display: fixed;
-  top: 0; }
+  position: fixed;
+  top: 0;
+  width: 100%; }
   .header-check {
     display: inline-block;
     background-color: black;
@@ -119,7 +120,7 @@ html {
     height: 35rem; }
     .hero__icons i {
       position: absolute;
-      color: #a79a2d;
+      color: #a99d2d;
       text-shadow: 0.2rem 0.2rem 0.2rem black;
       left: 50%;
       transform: translateX(-50%) scale(0);
@@ -127,3 +128,71 @@ html {
     .hero__icons--active {
       transform: translateX(-50%) scale(1) !important;
       transition: transform 0.3s 0.3s !important; }
+
+.section-2 {
+  background-color: #222;
+  padding: 3rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 3rem; }
+
+.card {
+  background-color: #a99d2d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+  padding: 3rem 2rem;
+  box-shadow: 3rem 3rem 4rem black;
+  transition: all 0.3s; }
+  .card-img {
+    max-height: 25rem; }
+  .card-name {
+    text-transform: uppercase;
+    color: black;
+    font-size: 3rem;
+    text-shadow: 0.2rem 0.2rem 0.2rem black;
+    font-weight: 700;
+    letter-spacing: 2px; }
+  .card-btn {
+    outline: none;
+    border: none;
+    background-color: black;
+    color: #aaa;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer; }
+  .card::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1.5rem;
+    background-color: #ccbd3e;
+    top: 0;
+    right: 100%;
+    transform: skewY(45deg);
+    transform-origin: right; }
+  .card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5rem;
+    background-color: #ccbd3e;
+    left: 0;
+    bottom: 100%;
+    transform: skewX(45deg);
+    transform-origin: bottom; }
+  .card:hover {
+    transform: translateY(-2rem);
+    box-shadow: 4rem 4rem 4rem black; }
