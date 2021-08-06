@@ -1,27 +1,110 @@
 .section-3 {
     background-color: $color-3;
-    padding: 5rem 0;
+    padding: 10rem 0;
 }
 
 .gallery {
+    margin-top: 10rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    justify-content: center;
+    align-items: center;
     &-link {
         text-decoration: none;
         color: $color-2;
+        display: inline-block;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 0%;
+            height: 0.2rem;
+            background-color: $color-2;
+            left: 2rem;
+            top: 10rem;
+            position: absolute;
+            transition: width 0.3s;
+            z-index: 5;
+        }
+        &::after {
+            content: "";
+            width: 0.2rem;
+            height: 0%;
+            background-color: $color-2;
+            left: 80%;
+            top: 4rem;
+            position: absolute;
+            transition: height 0.3s;
+        }
+
+        &:hover {
+            &::before {
+                width: 90%;
+            }
+            &::after {
+                height: 80%;
+            }
+        }
     }
 }
 
 .food {
     &-img {
-        width: 24vw;
-        height: 15vw;
+        width: 45rem;
+        height: 30rem;
         object-fit: cover;
+        // position: relative;
+        box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #a2e946,
+            0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+        transition: all 0.5s;
     }
     &-name {
         text-transform: uppercase;
         font-size: 2.5rem;
+        position: absolute;
+        top: 4rem;
+        left: 2rem;
+        z-index: 5;
+        // display: inline-block;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        width: 0%;
+        overflow: hidden;
+        // transform: scaleX(0);
+        // transform-origin: left;
+        transition: width 0.3s;
     }
     &-description {
         text-transform: uppercase;
-        font-size: 2rem;
+        font-size: 1.6rem;
+        position: absolute;
+        top: 15rem;
+        left: 2rem;
+        width: 70%;
+        opacity: 0;
+        transform: translateX(-1rem);
+        transition: all 0.3s;
     }
+}
+
+.gallery-link:hover .food-name {
+    width: 100%;
+    // transform: scaleX(1);
+    transition: width 1.5s 0.5s;
+}
+
+.gallery-link:hover .food-description {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.7s 0.5s;
+}
+
+.gallery-link:hover .food-img {
+    box-shadow: 1rem 1rem 0.1rem #e92929, 2rem 2rem 0.1rem #a2e946,
+        3rem 3rem 0.1rem #297ce9, 4rem 4rem 0.1rem #e92999;
+    transform: scale(1.1);
+    filter: blur(0.5rem);
+    opacity: 0.5;
 }
