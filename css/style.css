@@ -32,6 +32,9 @@ html {
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 45%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 35%; } }
 
 .section-heading {
   font-size: 12rem;
@@ -41,6 +44,9 @@ html {
   text-transform: capitalize;
   letter-spacing: 0.5rem;
   text-shadow: 0.3rem 0.3rem 0.3rem #000; }
+  @media only screen and (max-width: 37.5em) {
+    .section-heading {
+      font-size: 8rem; } }
 
 .header {
   z-index: 10;
@@ -53,10 +59,11 @@ html {
     height: 5rem;
     width: 3rem;
     border-radius: 5rem 5rem 2rem 2rem;
+    box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.603);
     position: fixed;
     top: 2rem;
     left: 3rem;
-    transition: top 0.3s;
+    transition: top 0.3s 0.2s;
     z-index: 10;
     cursor: pointer; }
     .header-check::before {
@@ -66,11 +73,13 @@ html {
       width: 0.2rem;
       bottom: 100%;
       left: calc(1.5rem - 0.1rem);
-      background-color: inherit; }
+      background-color: inherit;
+      z-index: 10; }
   .header #navbar-check {
     display: none; }
   #navbar-check:checked + .header-check {
-    top: 17rem; }
+    top: 17rem;
+    transition: top 0.3s; }
 
 .navbar {
   background-color: black;
@@ -85,6 +94,9 @@ html {
   top: 0;
   margin-top: -15rem;
   transition: transform 0.3s; }
+  @media only screen and (max-width: 37.5em) {
+    .navbar {
+      gap: 1rem; } }
   .navbar-link {
     text-decoration: none;
     display: flex;
@@ -95,6 +107,9 @@ html {
     transition: color 0.3s; }
     .navbar-link i {
       font-size: 7rem; }
+      @media only screen and (max-width: 37.5em) {
+        .navbar-link i {
+          font-size: 5rem; } }
     .navbar-link span {
       font-size: 2.5rem;
       font-weight: 900;
@@ -103,11 +118,12 @@ html {
       color: white; }
 
 #navbar-check:checked ~ .navbar {
-  transform: translateY(100%); }
+  transform: translateY(100%);
+  transition: transform 0.3s 0.2s; }
 
 .hero {
   background-color: #333;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly; }
@@ -115,6 +131,9 @@ html {
     font-size: 35rem;
     position: relative;
     height: 35rem; }
+    @media only screen and (max-width: 37.5em) {
+      .hero__icons {
+        font-size: 25rem; } }
     .hero__icons i {
       position: absolute;
       color: #a99d2d;
@@ -143,7 +162,7 @@ html {
   padding: 2rem; }
 
 .card {
-  background-color: #a99d2d;
+  background: linear-gradient(135deg, #c5b734, #a99d2d);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -317,6 +336,7 @@ html {
         letter-spacing: 0.1rem; }
     .footer__signup-form--btn {
       outline: none;
+      cursor: pointer;
       border: none;
       background-color: #222;
       color: #a99d2d;

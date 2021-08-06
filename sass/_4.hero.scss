@@ -1,6 +1,6 @@
 .hero {
     background-color: $color-3;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -10,6 +10,9 @@
         font-size: 35rem;
         position: relative;
         height: 35rem;
+        @include respond(phone) {
+            font-size: 25rem;
+        }
         i {
             position: absolute;
             color: $color-4;

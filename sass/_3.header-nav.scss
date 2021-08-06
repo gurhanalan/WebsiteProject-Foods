@@ -10,10 +10,11 @@
         height: 5rem;
         width: 3rem;
         border-radius: 5rem 5rem 2rem 2rem;
+        box-shadow: 1rem 1rem 4rem hsla(0, 0%, 0%, 0.603);
         position: fixed;
         top: 2rem;
         left: 3rem;
-        transition: top 0.3s;
+        transition: top 0.3s 0.2s;
         z-index: 10;
         cursor: pointer;
 
@@ -26,6 +27,7 @@
             bottom: 100%;
             left: calc(1.5rem - 0.1rem);
             background-color: inherit;
+            z-index: 10;
         }
     }
 
@@ -35,6 +37,7 @@
     }
     #navbar-check:checked + &-check {
         top: 17rem;
+        transition: top 0.3s;
     }
 }
 
@@ -55,6 +58,9 @@
     // transform: translateY(100%);
     // transform-origin: top;
     transition: transform 0.3s;
+    @include respond(phone) {
+        gap: 1rem;
+    }
 
     &-link {
         text-decoration: none;
@@ -67,6 +73,9 @@
 
         i {
             font-size: 7rem;
+            @include respond(phone) {
+                font-size: 5rem;
+            }
         }
 
         span {
@@ -83,4 +92,5 @@
 
 #navbar-check:checked ~ .navbar {
     transform: translateY(100%);
+    transition: transform 0.3s 0.2s;
 }
