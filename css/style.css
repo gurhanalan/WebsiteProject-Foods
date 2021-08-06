@@ -32,9 +32,6 @@ html {
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 45%; } }
-  @media only screen and (max-width: 37.5em) {
-    html {
-      font-size: 30%; } }
 
 .section-heading {
   font-size: 12rem;
@@ -142,7 +139,8 @@ html {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 3rem; }
+  gap: 5rem;
+  padding: 2rem; }
 
 .card {
   background-color: #a99d2d;
@@ -196,3 +194,24 @@ html {
   .card:hover {
     transform: translateY(-2rem);
     box-shadow: 4rem 4rem 4rem black; }
+
+.section-3 {
+  background-color: #333;
+  padding: 5rem 0; }
+
+.gallery-link {
+  text-decoration: none;
+  color: white; }
+
+.food-img {
+  width: 24vw;
+  height: 15vw;
+  object-fit: cover; }
+
+.food-name {
+  text-transform: uppercase;
+  font-size: 2.5rem; }
+
+.food-description {
+  text-transform: uppercase;
+  font-size: 2rem; }
