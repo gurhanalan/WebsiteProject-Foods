@@ -1,17 +1,17 @@
 # Website - Foods
 
-[This project](https://gurhanalan.github.io/WebsiteProject-Foods/) is a website of a restaurant displaying their foods.
+[This project](https://gurhan-websiteproject-foods.netlify.app/) is a website of a restaurant displaying their foods.
 
 ## Table of contents
 
--   [Website - Foods](#website---foods)
-    -   [Table of contents](#table-of-contents)
-    -   [Overview](#overview)
-        -   [The challenge](#the-challenge)
-        -   [Screenshots](#screenshots)
-        -   [Links](#links)
-    -   [My process](#my-process)
-        -   [Built with](#built-with)
+- [Website - Foods](#website---foods)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshots](#screenshots)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
 
 ## Overview
 
@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Live Website](https://gurhanalan.github.io/WebsiteProject-Foods/)
+-   Solution URL: [Live Website](https://gurhan-websiteproject-foods.netlify.app/)
 
 ## My process
 
